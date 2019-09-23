@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/linear"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/input_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Masukkan Nama Lengkap Anda"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/insert_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btn_click"
+        android:text="Insert"
+        app:layout_constraintBottom_toTopOf="@+id/edit_btn"
+        tools:layout_editor_absoluteX="-26dp" />
+
+    <Button
+        android:id="@+id/edit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:onClick="btn_click"
+        app:layout_constraintBottom_toTopOf="@+id/delete_btn"
+        app:layout_constraintTop_toBottomOf="@+id/insert_btn"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/delete_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:onClick="btn_click"
+        app:layout_constraintBottom_toTopOf="@+id/list_btn"
+        app:layout_constraintTop_toBottomOf="@+id/edit_btn"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/list_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="list"
+        android:onClick="btn_click"
+        app:layout_constraintTop_toBottomOf="@+id/delete_btn"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:gravity="top|center"
+        android:text="LIST BIODATA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_btn" />
+
+</LinearLayout>
